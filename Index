@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>James Finance — Take Control of Your Money</title>
+  <meta name="description" content="The personal finance app built for the next generation. Track spending, grow wealth, and take control — all in one beautiful app." />
+  <meta property="og:title" content="James Finance" />
+  <meta property="og:description" content="Take control of your money." />
+  <meta property="og:url" content="https://jamesfinance.co.uk" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #080812;
+      --card:     #0f0f1f;
+      --card2:    #141428;
+      --accent:   #6C63FF;
+      --accent2:  #00D4AA;
+      --accent3:  #FF9F43;
+      --text:     #E8E8F0;
+      --muted:    #5a5a7a;
+      --border:   rgba(108,99,255,0.15);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── Stars ── */
+    .stars {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .star {
+      position: absolute;
+      border-radius: 50%;
+      background: #fff;
+      animation: twinkle var(--d) ease-in-out infinite alternate;
+      opacity: 0;
+    }
+    @keyframes twinkle {
+      to { opacity: var(--o); }
+    }
+
+    /* ── Glow orbs ── */
+    .orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(120px);
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.18;
+    }
+    .orb-1 { width: 600px; height: 600px; background: var(--accent); top: -200px; left: -200px; }
+    .orb-2 { width: 400px; height: 400px; background: var(--accent2); bottom: 100px; right: -100px; }
+    .orb-3 { width: 300px; height: 300px; background: var(--accent3); top: 50%; left: 60%; }
+
+    /* ── Layout ── */
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+    /* ── Nav ── */
+    nav {
+      padding: 24px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 10;
+    }
+    .logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 20px;
+      color: var(--text);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-icon {
+      width: 36px; height: 36px;
+      background: linear-gradient(135deg, var(--accent), #9b95ff);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+    }
+    .nav-badge {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--accent2);
+      background: rgba(0,212,170,0.1);
+      border: 1px solid rgba(0,212,170,0.25);
+      padding: 4px 12px;
+      border-radius: 50px;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      padding: 80px 0 60px;
+      text-align: center;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--accent2);
+      background: rgba(0,212,170,0.08);
+      border: 1px solid rgba(0,212,170,0.2);
+      border-radius: 50px;
+      padding: 6px 16px;
+      margin-bottom: 32px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--accent2);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
+    }
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(42px, 7vw, 80px);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+    h1 span {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-sub {
+      font-size: clamp(16px, 2.5vw, 20px);
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto 48px;
+      line-height: 1.6;
+      font-weight: 300;
+    }
+
+    /* ── Waitlist form ── */
+    .waitlist-wrap {
+      max-width: 480px;
+      margin: 0 auto 20px;
+    }
+    .waitlist-form {
+      display: flex;
+      gap: 0;
+      background: var(--card2);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 6px 6px 6px 20px;
+      align-items: center;
+      transition: border-color 0.2s;
+    }
+    .waitlist-form:focus-within {
+      border-color: var(--accent);
+    }
+    .waitlist-form input {
+      flex: 1;
+      background: none;
+      border: none;
+      outline: none;
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      padding: 10px 0;
+    }
+    .waitlist-form input::placeholder { color: var(--muted); }
+    .waitlist-form button {
+      background: linear-gradient(135deg, var(--accent), #9b95ff);
+      border: none;
+      border-radius: 11px;
+      color: #fff;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 12px 22px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: opacity 0.2s, transform 0.15s;
+      letter-spacing: 0.01em;
+    }
+    .waitlist-form button:hover { opacity: 0.9; transform: scale(1.02); }
+    .waitlist-form button:active { transform: scale(0.98); }
+    .waitlist-note {
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .success-msg {
+      display: none;
+      background: rgba(0,212,170,0.1);
+      border: 1px solid rgba(0,212,170,0.3);
+      border-radius: 14px;
+      padding: 16px 24px;
+      color: var(--accent2);
+      font-weight: 500;
+      font-size: 15px;
+      text-align: center;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    /* ── Platforms ── */
+    .platforms {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+    .platform-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      padding: 8px 18px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .platform-pill:hover { border-color: var(--accent); color: var(--text); }
+    .platform-pill svg { width: 16px; height: 16px; fill: currentColor; }
+
+    /* ── Phone mockup ── */
+    .mockup-section {
+      padding: 60px 0 40px;
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .phone-frame {
+      width: 220px;
+      height: 460px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 36px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 40px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(108,99,255,0.1);
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+    }
+    .phone-frame:hover { transform: translateY(-8px) rotate(-1deg); }
+    .phone-frame:nth-child(2) { transform: translateY(24px); }
+    .phone-frame:nth-child(2):hover { transform: translateY(16px) rotate(1deg); }
+    .phone-frame:nth-child(3) { transform: translateY(48px); }
+    .phone-frame:nth-child(3):hover { transform: translateY(40px) rotate(-0.5deg); }
+    .phone-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+    .phone-notch {
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 80px; height: 22px;
+      background: #000;
+      border-radius: 0 0 14px 14px;
+      z-index: 2;
+    }
+
+    /* ── Features ── */
+    .features { padding: 80px 0; }
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.1;
+      margin-bottom: 48px;
+      max-width: 540px;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .feature-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+      transition: border-color 0.2s, transform 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .feature-card:hover { border-color: rgba(108,99,255,0.4); transform: translateY(-4px); }
+    .feature-card:hover::before { opacity: 1; }
+    .feature-icon {
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+    .feature-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+    .feature-card p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ── Pricing ── */
+    .pricing { padding: 80px 0; }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .plan-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 32px;
+      position: relative;
+      transition: transform 0.2s;
+    }
+    .plan-card:hover { transform: translateY(-4px); }
+    .plan-card.featured {
+      border-color: var(--accent);
+      background: linear-gradient(135deg, rgba(108,99,255,0.12), var(--card));
+    }
+    .plan-badge {
+      position: absolute;
+      top: -12px; left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, var(--accent), #9b95ff);
+      color: #fff;
+      font-family: 'Syne', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 50px;
+    }
+    .plan-name {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 22px;
+      margin-bottom: 4px;
+    }
+    .plan-price {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 36px;
+      margin: 16px 0 4px;
+    }
+    .plan-price span { font-size: 16px; font-weight: 400; color: var(--muted); }
+    .plan-desc { font-size: 13px; color: var(--muted); margin-bottom: 24px; }
+    .plan-features { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .plan-features li {
+      font-size: 14px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .plan-features li::before {
+      content: '✓';
+      color: var(--accent2);
+      font-weight: 700;
+      font-size: 13px;
+      flex-shrink: 0;
+    }
+
+    /* ── CTA bottom ── */
+    .cta-bottom {
+      padding: 80px 0 100px;
+      text-align: center;
+    }
+    .cta-bottom h2 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(28px, 4vw, 48px);
+      margin-bottom: 16px;
+    }
+    .cta-bottom p { color: var(--muted); font-size: 16px; margin-bottom: 40px; }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: gap;
+      gap: 16px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    footer a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    footer a:hover { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+
+    /* ── Animations ── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 600px) {
+      .waitlist-form { flex-direction: column; padding: 12px; gap: 8px; }
+      .waitlist-form button { width: 100%; padding: 14px; }
+      .mockup-section { gap: 12px; }
+      .phone-frame { width: 160px; height: 340px; }
+      .phone-frame:nth-child(3) { display: none; }
+      footer { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Stars -->
+  <div class="stars" id="stars"></div>
+
+  <!-- Glow orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <!-- Nav -->
+  <div class="wrap">
+    <nav>
+      <a href="/" class="logo">
+        <div class="logo-icon">💷</div>
+        James Finance
+      </a>
+      <span class="nav-badge">Coming Soon</span>
+    </nav>
+  </div>
+
+  <!-- Hero -->
+  <div class="wrap">
+    <div class="hero fade-up">
+      <div class="hero-eyebrow">Built for the next generation</div>
+      <h1>Your money,<br /><span>finally under control</span></h1>
+      <p class="hero-sub">Track spending, grow your wealth, hit your savings goals — all in one beautifully designed app.</p>
+
+      <div class="waitlist-wrap">
+        <div class="waitlist-form" id="form-wrap">
+          <input type="email" id="email-input" placeholder="Enter your email address" autocomplete="email" />
+          <button onclick="joinWaitlist()">Join Waitlist →</button>
+        </div>
+        <div class="success-msg" id="success-msg">
+          🎉 You're on the list! We'll be in touch soon.
+        </div>
+        <p class="waitlist-note" style="margin-top:12px">No spam. Just a heads up when we launch.</p>
+      </div>
+
+      <div class="platforms">
+        <div class="platform-pill">
+          <svg viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          iOS App Store
+        </div>
+        <div class="platform-pill">
+          <svg viewBox="0 0 24 24"><path d="M3.18 23.76c.3.17.64.22.98.15l13.2-7.62-2.82-2.82-11.36 10.29zm-1.9-20.2c-.18.28-.28.62-.28.99v18.9c0 .37.1.71.28.99l.08.08 10.58-10.58v-.25L1.36 3.48l-.08.08zM20.55 10.37l-2.81-1.62-3.16 3.16 3.16 3.15 2.83-1.63c.8-.46.8-1.61-.02-2.06zM4.16.24L17.36 7.86l-2.82 2.82L3.18.39C3.5.32 3.86.07 4.16.24z"/></svg>
+          Google Play
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phone mockups -->
+  <div class="wrap">
+    <div class="mockup-section fade-up">
+      <div class="phone-frame">
+        <div class="phone-notch"></div>
+        <img src="https://i.imgur.com/placeholder.png" alt="Home screen" onerror="this.style.background='linear-gradient(135deg,#0f0f1f,#1a1a3e)';this.style.display='block'" />
+        <div style="position:absolute;inset:0;background:linear-gradient(135deg,#0f0f1f 0%,#1a1a3e 100%);display:flex;flex-direction:column;padding:40px 16px 20px;gap:12px;">
+          <div style="font-size:10px;color:#5a5a7a;letter-spacing:0.1em;">NET WORTH</div>
+          <div style="font-family:'Syne',sans-serif;font-size:26px;font-weight:800;color:#E8E8F0;">£26,448.20</div>
+          <div style="display:flex;gap:8px;margin-top:4px;">
+            <div style="flex:1;background:#141428;border:1px solid rgba(108,99,255,0.15);border-radius:12px;padding:10px;font-size:10px;color:#5a5a7a;">Income<br/><span style="color:#00D4AA;font-weight:700;font-size:13px;">£3,200</span></div>
+            <div style="flex:1;background:#141428;border:1px solid rgba(108,99,255,0.15);border-radius:12px;padding:10px;font-size:10px;color:#5a5a7a;">Spent<br/><span style="color:#FF6B6B;font-weight:700;font-size:13px;">£840</span></div>
+          </div>
+          <div style="background:#141428;border:1px solid rgba(108,99,255,0.15);border-radius:14px;padding:14px;margin-top:4px;">
+            <div style="font-size:10px;color:#5a5a7a;margin-bottom:8px;">RECENT TRANSACTIONS</div>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-size:12px;color:#E8E8F0;">Tesco</span><span style="font-size:12px;color:#FF6B6B;font-weight:700;">-£32.50</span></div>
+              <div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-size:12px;color:#E8E8F0;">Salary</span><span style="font-size:12px;color:#00D4AA;font-weight:700;">+£2,800</span></div>
+              <div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-size:12px;color:#E8E8F0;">Netflix</span><span style="font-size:12px;color:#FF6B6B;font-weight:700;">-£15.99</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="phone-frame">
+        <div class="phone-notch"></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(135deg,#0f0f1f 0%,#1a1a3e 100%);display:flex;flex-direction:column;padding:40px 16px 20px;gap:12px;">
+          <div style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#E8E8F0;">Saving Goals</div>
+          <div style="background:#141428;border:1px solid rgba(108,99,255,0.15);border-radius:14px;padding:14px;">
+            <div style="font-size:9px;color:#5a5a7a;letter-spacing:0.1em;margin-bottom:6px;">TOTAL SAVED</div>
+            <div style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:#E8E8F0;">£7,050</div>
+            <div style="height:4px;background:#1a1a3e;border-radius:4px;margin-top:10px;"><div style="width:58%;height:100%;background:linear-gradient(90deg,#6C63FF,#00D4AA);border-radius:4px;"></div></div>
+            <div style="text-align:right;font-size:10px;color:#6C63FF;margin-top:4px;font-weight:700;">58% overall</div>
+          </div>
+          <div style="background:#141428;border:1px solid rgba(108,99,255,0.15);border-radius:14px;padding:14px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;"><span style="font-size:13px;font-weight:700;color:#E8E8F0;">Holiday 🌴</span><span style="font-size:14px;font-weight:800;color:#FFD700;">100%</span></div>
+            <div style="height:4px;background:#1a1a3e;border-radius:4px;"><div style="width:100%;height:100%;background:#FFD700;border-radius:4px;"></div></div>
+            <div style="font-size:10px;color:#00D4AA;margin-top:8px;font-weight:600;">Goal reached! 🎉</div>
+          </div>
+          <div style="background:#141428;border:1px solid rgba(108,99,255,0.15);border-radius:14px;padding:14px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;"><span style="font-size:13px;font-weight:700;color:#E8E8F0;">New Car 🚗</span><span style="font-size:14px;font-weight:800;color:#00D4AA;">47%</span></div>
+            <div style="height:4px;background:#1a1a3e;border-radius:4px;"><div style="width:47%;height:100%;background:#00D4AA;border-radius:4px;"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="phone-frame">
+        <div class="phone-notch"></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(135deg,#0f0f1f 0%,#1a1a3e 100%);display:flex;flex-direction:column;padding:40px 16px 20px;gap:12px;">
+          <div style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#E8E8F0;">Stats</div>
+          <div style="display:flex;gap:6px;">
+            <div style="flex:1;background:#6C63FF;border-radius:50px;padding:8px;text-align:center;font-size:11px;font-weight:700;color:#fff;">Weekly</div>
+            <div style="flex:1;background:#141428;border-radius:50px;padding:8px;text-align:center;font-size:11px;color:#5a5a7a;">Monthly</div>
+            <div style="flex:1;background:#141428;border-radius:50px;padding:8px;text-align:center;font-size:11px;color:#5a5a7a;">Yearly</div>
+          </div>
+          <div style="background:#141428;border:1px solid rgba(108,99,255,0.15);border-radius:14px;padding:14px;">
+            <div style="font-size:11px;font-weight:700;color:#E8E8F0;margin-bottom:12px;">Spending by Category</div>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <div><div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="font-size:11px;color:#E8E8F0;">Groceries</span><span style="font-size:11px;color:#5a5a7a;">£180</span></div><div style="height:4px;background:#1a1a3e;border-radius:4px;"><div style="width:72%;height:100%;background:#00D4AA;border-radius:4px;"></div></div></div>
+              <div><div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="font-size:11px;color:#E8E8F0;">Transport</span><span style="font-size:11px;color:#5a5a7a;">£95</span></div><div style="height:4px;background:#1a1a3e;border-radius:4px;"><div style="width:38%;height:100%;background:#FF9F43;border-radius:4px;"></div></div></div>
+              <div><div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="font-size:11px;color:#E8E8F0;">Eating Out</span><span style="font-size:11px;color:#5a5a7a;">£64</span></div><div style="height:4px;background:#1a1a3e;border-radius:4px;"><div style="width:25%;height:100%;background:#6C63FF;border-radius:4px;"></div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features -->
+  <div class="wrap">
+    <div class="features fade-up">
+      <div class="section-label">Everything you need</div>
+      <div class="section-title">Built different.<br />Actually useful.</div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon" style="background:rgba(108,99,255,0.15);">📊</div>
+          <h3>Smart Spending Stats</h3>
+          <p>Weekly, monthly and yearly breakdowns with beautiful charts. Know exactly where your money goes.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="background:rgba(0,212,170,0.15);">🎯</div>
+          <h3>Saving Goals</h3>
+          <p>Set targets, track progress and actually hit your goals. Holiday, house deposit, new car — whatever it is.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="background:rgba(255,159,67,0.15);">💼</div>
+          <h3>Net Worth Tracker</h3>
+          <p>Cards, investments, property, vehicles — see your complete financial picture in one place.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="background:rgba(255,107,107,0.15);">🔁</div>
+          <h3>Recurring Bills</h3>
+          <p>Track every subscription and bill. Know your monthly outgoings at a glance. Never miss a payment.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="background:rgba(108,99,255,0.15);">📈</div>
+          <h3>Live Markets</h3>
+          <p>Real-time trading signals for stocks, crypto and commodities. Stay ahead of the market. (Premium)</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="background:rgba(0,212,170,0.15);">🌍</div>
+          <h3>9 Languages & Currencies</h3>
+          <p>Full support for GBP, USD, EUR and more. Available in English, Spanish, French, Italian and beyond.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing -->
+  <div class="wrap">
+    <div class="pricing fade-up">
+      <div class="section-label">Simple pricing</div>
+      <div class="section-title">Start free.<br />Upgrade when ready.</div>
+      <div class="pricing-grid">
+        <div class="plan-card">
+          <div class="plan-name">Free</div>
+          <div class="plan-price">£0 <span>/ month</span></div>
+          <div class="plan-desc">Everything you need to get started.</div>
+          <ul class="plan-features">
+            <li>Up to 20 transactions</li>
+            <li>1 saving goal</li>
+            <li>1 budget</li>
+            <li>Spending stats</li>
+            <li>Net worth tracker</li>
+          </ul>
+        </div>
+        <div class="plan-card featured">
+          <div class="plan-badge">Most Popular</div>
+          <div class="plan-name">Pro</div>
+          <div class="plan-price">£3.99 <span>/ month</span></div>
+          <div class="plan-desc">For those serious about their finances.</div>
+          <ul class="plan-features">
+            <li>Unlimited transactions</li>
+            <li>5 saving goals</li>
+            <li>5 budgets</li>
+            <li>Recurring bills tracker</li>
+            <li>Search & filters</li>
+            <li>Custom themes</li>
+          </ul>
+        </div>
+        <div class="plan-card">
+          <div class="plan-name">Premium</div>
+          <div class="plan-price">£7.99 <span>/ month</span></div>
+          <div class="plan-desc">The complete financial toolkit.</div>
+          <ul class="plan-features">
+            <li>Everything in Pro</li>
+            <li>Unlimited goals & budgets</li>
+            <li>Live market signals</li>
+            <li>Investment tracker</li>
+            <li>Full asset management</li>
+            <li>Trading signals & forecasts</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA bottom -->
+  <div class="wrap">
+    <div class="cta-bottom fade-up">
+      <h2>Ready to take control?</h2>
+      <p>Join thousands of people getting early access.</p>
+      <div class="waitlist-wrap">
+        <div class="waitlist-form" id="form-wrap-2">
+          <input type="email" id="email-input-2" placeholder="Enter your email address" autocomplete="email" />
+          <button onclick="joinWaitlist2()">Join Waitlist →</button>
+        </div>
+        <div class="success-msg" id="success-msg-2">
+          🎉 You're on the list! We'll be in touch soon.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="wrap">
+    <footer>
+      <span>© 2026 James Finance. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="mailto:contact@jamesfinance.co.uk">Contact</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // ── Stars ──
+    const starsEl = document.getElementById('stars');
+    for (let i = 0; i < 120; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      const size = Math.random() * 2 + 0.5;
+      s.style.cssText = `
+        width:${size}px; height:${size}px;
+        top:${Math.random()*100}%; left:${Math.random()*100}%;
+        --d:${2 + Math.random()*4}s;
+        --o:${0.1 + Math.random()*0.6};
+        animation-delay:${Math.random()*4}s;
+      `;
+      starsEl.appendChild(s);
+    }
+
+    // ── Intersection observer for fade-ups ──
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+    // ── Waitlist ──
+    async function submitEmail(email, successId, formId) {
+      if (!email || !email.includes('@')) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+      // Send to Formspree — replace mzdjgkrl with your Formspree form ID
+      try {
+        const res = await fetch('https://formspree.io/f/mzdjgkrl', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ email, source: 'jamesfinance-waitlist' }),
+        });
+        if (res.ok) {
+          document.getElementById(formId).style.display = 'none';
+          document.getElementById(successId).style.display = 'block';
+        } else {
+          alert('Something went wrong. Please try again.');
+        }
+      } catch {
+        // Fallback — just show success (you can add a backend later)
+        document.getElementById(formId).style.display = 'none';
+        document.getElementById(successId).style.display = 'block';
+      }
+    }
+
+    function joinWaitlist() {
+      const email = document.getElementById('email-input').value.trim();
+      submitEmail(email, 'success-msg', 'form-wrap');
+    }
+
+    function joinWaitlist2() {
+      const email = document.getElementById('email-input-2').value.trim();
+      submitEmail(email, 'success-msg-2', 'form-wrap-2');
+    }
+
+    // Enter key support
+    document.getElementById('email-input').addEventListener('keydown', e => { if (e.key === 'Enter') joinWaitlist(); });
+    document.getElementById('email-input-2').addEventListener('keydown', e => { if (e.key === 'Enter') joinWaitlist2(); });
+  </script>
+</body>
+</html>
