@@ -601,7 +601,7 @@
     const btn = document.querySelector('#' + id + '-form button, #' + id + '-form .cta-btn');
     if (btn) { btn.disabled = true; btn.textContent = 'Joining...'; }
     try {
-      await fetch('https://formspree.io/f/xpwzabcd', {
+      await fetch('https://formspree.io/f/mzdjgkrl', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({ email, source: 'jamesfinance-waitlist', timestamp: new Date().toISOString() }),
