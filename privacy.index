@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Privacy Policy — James Finance</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJiZyIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNTAlIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWExYTNlIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMGQwZDFhIi8+PC9yYWRpYWxHcmFkaWVudD48cmFkaWFsR3JhZGllbnQgaWQ9ImJlYXIiIGN4PSI1MCUiIGN5PSIzNSUiIHI9IjY1JSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwZDRhYSIvPjxzdG9wIG9mZnNldD0iNTUlIiBzdG9wLWNvbG9yPSIjNmM2M2ZmIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNGE0MGMwIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iMzIiIGZpbGw9InVybCgjYmcpIi8+PGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iMzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzZjNjNmZiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1vcGFjaXR5PSIwLjYiLz48Y2lyY2xlIGN4PSIxOCIgY3k9IjIxIiByPSI3IiBmaWxsPSJ1cmwoI2JlYXIpIi8+PGNpcmNsZSBjeD0iNDYiIGN5PSIyMSIgcj0iNyIgZmlsbD0idXJsKCNiZWFyKSIvPjxjaXJjbGUgY3g9IjMyIiBjeT0iMzUiIHI9IjE4IiBmaWxsPSJ1cmwoI2JlYXIpIi8+PGNpcmNsZSBjeD0iMTgiIGN5PSIyMSIgcj0iNCIgZmlsbD0iIzBkMGQxYSIgZmlsbC1vcGFjaXR5PSIwLjM1Ii8+PGNpcmNsZSBjeD0iNDYiIGN5PSIyMSIgcj0iNCIgZmlsbD0iIzBkMGQxYSIgZmlsbC1vcGFjaXR5PSIwLjM1Ii8+PGNpcmNsZSBjeD0iMjYiIGN5PSIzMSIgcj0iMi41IiBmaWxsPSIjMGQwZDFhIi8+PGNpcmNsZSBjeD0iMzgiIGN5PSIzMSIgcj0iMi41IiBmaWxsPSIjMGQwZDFhIi8+PGNpcmNsZSBjeD0iMjciIGN5PSIzMCIgcj0iMC45IiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjUiLz48Y2lyY2xlIGN4PSIzOSIgY3k9IjMwIiByPSIwLjkiIGZpbGw9IndoaXRlIiBmaWxsLW9wYWNpdHk9IjAuNSIvPjxlbGxpcHNlIGN4PSIzMiIgY3k9IjM3IiByeD0iMi41IiByeT0iMiIgZmlsbD0iIzBkMGQxYSIvPjxwYXRoIGQ9Ik0gMjggNDAuNSBRIDMyIDQ0LjUgMzYgNDAuNSIgc3Ryb2tlPSIjMGQwZDFhIiBzdHJva2Utd2lkdGg9IjEuOCIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PC9zdmc+"/>
+  <meta name="description" content="James Finance Privacy Policy — how we collect, use, and protect your personal data."/>
+
+  <meta http-equiv="X-Content-Type-Options" content="nosniff"/>
+  <meta http-equiv="X-Frame-Options" content="DENY"/>
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    :root{
+      --bg:#ffffff;
+      --bg2:#f5f5f7;
+      --text:#0a0a0a;
+      --muted:#6e6e73;
+      --accent:#6c63ff;
+      --accent2:#00c896;
+      --border:#e5e5e7;
+    }
+    html{scroll-behavior:smooth;}
+    body{
+      background:var(--bg);
+      color:var(--text);
+      font-family:"Plus Jakarta Sans",sans-serif;
+      -webkit-font-smoothing:antialiased;
+      overflow-x:hidden;
+      line-height:1.7;
+    }
+
+    /* ── NAV ── */
+    nav{
+      position:sticky;top:0;z-index:100;
+      background:rgba(255,255,255,0.92);
+      backdrop-filter:blur(20px);
+      -webkit-backdrop-filter:blur(20px);
+      border-bottom:1px solid var(--border);
+      padding:0 40px;height:64px;
+      display:flex;align-items:center;justify-content:space-between;
+    }
+    .logo{
+      font-weight:800;font-size:18px;color:var(--text);
+      text-decoration:none;letter-spacing:-0.02em;
+      display:flex;align-items:center;gap:10px;
+    }
+    .logo img{width:32px;height:32px;border-radius:8px;}
+    .logo-name span{color:var(--accent);}
+    .nav-back{
+      display:flex;align-items:center;gap:6px;
+      color:var(--muted);font-size:13px;font-weight:600;
+      text-decoration:none;
+      padding:9px 18px;border-radius:50px;
+      border:1px solid var(--border);
+      transition:border-color 0.2s,color 0.2s;
+    }
+    .nav-back:hover{border-color:var(--accent);color:var(--accent);}
+    .nav-back svg{width:14px;height:14px;}
+
+    /* ── HERO ── */
+    .hero{
+      max-width:760px;margin:0 auto;
+      padding:72px 40px 56px;
+      border-bottom:1px solid var(--border);
+    }
+    .section-tag{
+      font-size:11px;font-weight:700;
+      letter-spacing:0.1em;text-transform:uppercase;
+      color:var(--accent);margin-bottom:14px;
+    }
+    h1{
+      font-size:clamp(32px,5vw,56px);
+      font-weight:900;line-height:1.05;
+      letter-spacing:-0.04em;
+      color:var(--text);margin-bottom:16px;
+    }
+    h1 .gr{
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+      background-clip:text;
+    }
+    .hero-sub{
+      font-size:16px;color:var(--muted);
+      line-height:1.65;max-width:520px;margin-bottom:28px;
+    }
+    .meta-row{display:flex;flex-wrap:wrap;gap:10px;}
+    .meta-pill{
+      display:inline-flex;align-items:center;gap:7px;
+      background:var(--bg2);border:1px solid var(--border);
+      border-radius:50px;padding:7px 14px;
+      font-size:12px;font-weight:600;color:var(--muted);
+    }
+    .meta-pill svg{width:13px;height:13px;color:var(--accent2);flex-shrink:0;}
+
+    /* ── LAYOUT ── */
+    .page-wrap{
+      max-width:760px;margin:0 auto;
+      padding:56px 40px 100px;
+    }
+
+    /* ── TOC ── */
+    .toc{
+      background:var(--bg2);border:1px solid var(--border);
+      border-radius:20px;padding:28px 32px;margin-bottom:56px;
+    }
+    .toc-label{
+      font-size:11px;font-weight:700;text-transform:uppercase;
+      letter-spacing:0.08em;color:var(--muted);margin-bottom:16px;
+    }
+    .toc-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px 32px;}
+    .toc a{
+      color:var(--muted);text-decoration:none;
+      font-size:13px;font-weight:600;
+      padding:6px 0;display:flex;align-items:center;gap:10px;
+      border-bottom:1px solid transparent;
+      transition:color 0.2s;
+    }
+    .toc a:hover{color:var(--accent);}
+    .toc-num{
+      font-size:11px;font-weight:700;color:var(--accent);
+      min-width:20px;opacity:.7;
+    }
+
+    /* ── SECTIONS ── */
+    .section{margin-bottom:48px;scroll-margin-top:80px;}
+    .section-hdr{
+      display:flex;align-items:center;gap:12px;margin-bottom:18px;
+    }
+    .s-num{
+      font-size:10px;font-weight:800;
+      text-transform:uppercase;letter-spacing:.06em;
+      color:var(--accent);
+      background:rgba(108,99,255,.08);
+      border:1px solid rgba(108,99,255,.18);
+      border-radius:6px;padding:3px 9px;white-space:nowrap;
+    }
+    h2{
+      font-size:19px;font-weight:800;
+      letter-spacing:-0.02em;color:var(--text);
+      margin-bottom:0;max-width:none;line-height:1.3;
+    }
+    .card{
+      background:var(--bg);border:1px solid var(--border);
+      border-radius:16px;padding:24px 28px;
+    }
+    .card p{
+      font-size:14px;color:var(--muted);
+      line-height:1.85;margin-bottom:12px;
+    }
+    .card p:last-child{margin-bottom:0;}
+    .card ul{list-style:none;margin:6px 0;}
+    .card ul li{
+      font-size:14px;color:var(--muted);
+      line-height:1.8;padding:3px 0 3px 22px;
+      position:relative;
+    }
+    .card ul li::before{
+      content:'';position:absolute;left:0;top:13px;
+      width:7px;height:7px;border-radius:50%;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+    }
+    .card a{color:var(--accent);text-decoration:none;font-weight:600;}
+    .card a:hover{text-decoration:underline;}
+    .card strong{color:var(--text);}
+
+    /* DATA TABLE */
+    table{width:100%;border-collapse:collapse;font-size:13px;margin-top:4px;}
+    th{
+      text-align:left;padding:10px 14px;
+      color:var(--muted);font-size:11px;font-weight:700;
+      text-transform:uppercase;letter-spacing:.06em;
+      border-bottom:2px solid var(--border);
+    }
+    td{
+      padding:13px 14px;color:var(--muted);
+      border-bottom:1px solid var(--border);vertical-align:top;
+    }
+    tr:last-child td{border-bottom:none;}
+    td strong{color:var(--text);}
+
+    /* TAGS */
+    .tag{
+      display:inline-block;
+      background:rgba(108,99,255,.08);
+      border:1px solid rgba(108,99,255,.18);
+      border-radius:5px;padding:2px 8px;
+      font-size:11px;font-weight:700;color:var(--accent);
+    }
+    .tag.green{
+      background:rgba(0,200,150,.08);
+      border-color:rgba(0,200,150,.25);
+      color:var(--accent2);
+    }
+
+    /* NOTICE BOXES */
+    .notice{
+      display:flex;gap:12px;align-items:flex-start;
+      border-radius:12px;padding:16px 18px;margin-top:16px;
+    }
+    .notice.green{
+      background:rgba(0,200,150,.06);
+      border:1px solid rgba(0,200,150,.2);
+    }
+    .notice.yellow{
+      background:rgba(255,193,7,.06);
+      border:1px solid rgba(255,193,7,.2);
+    }
+    .notice svg{width:16px;height:16px;flex-shrink:0;margin-top:2px;}
+    .notice.green svg{color:var(--accent2);}
+    .notice.yellow svg{color:#d49a00;}
+    .notice p{
+      font-size:13px;line-height:1.7;margin:0;
+    }
+    .notice.green p{color:#007a5e;}
+    .notice.yellow p{color:#7a5a00;}
+
+    /* CONTACT GRID */
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px;}
+    .contact-card{
+      background:var(--bg2);border:1px solid var(--border);
+      border-radius:12px;padding:16px 18px;
+    }
+    .contact-card .clabel{
+      font-size:11px;font-weight:700;text-transform:uppercase;
+      letter-spacing:.06em;color:var(--muted);margin-bottom:6px;
+    }
+    .contact-card a{color:var(--accent);font-size:13px;font-weight:600;text-decoration:none;}
+    .contact-card a:hover{text-decoration:underline;}
+    .contact-card .cval{color:var(--accent2);font-size:13px;font-weight:700;}
+
+    /* FOOTER */
+    footer{
+      border-top:1px solid var(--border);
+      padding:40px;
+      display:flex;align-items:center;justify-content:space-between;
+      flex-wrap:wrap;gap:16px;
+    }
+    footer span{font-size:13px;color:var(--muted);}
+    .footer-links{display:flex;gap:24px;}
+    .footer-links a{
+      font-size:13px;color:var(--muted);text-decoration:none;font-weight:500;
+    }
+    .footer-links a:hover{color:var(--text);}
+
+    /* SCROLL REVEAL */
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity .5s,transform .5s;}
+    .reveal.in{opacity:1;transform:none;}
+
+    /* MOBILE */
+    @media(max-width:640px){
+      nav{padding:0 20px;}
+      .hero,.page-wrap{padding-left:20px;padding-right:20px;}
+      .hero{padding-top:40px;}
+      .toc-grid{grid-template-columns:1fr;}
+      .contact-grid{grid-template-columns:1fr;}
+      footer{padding:32px 20px;flex-direction:column;gap:12px;}
+      table{font-size:12px;}
+      th,td{padding:10px 10px;}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="/">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJiZyIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNTAlIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWExYTNlIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMGQwZDFhIi8+PC9yYWRpYWxHcmFkaWVudD48cmFkaWFsR3JhZGllbnQgaWQ9ImJlYXIiIGN4PSI1MCUiIGN5PSIzNSUiIHI9IjY1JSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwZDRhYSIvPjxzdG9wIG9mZnNldD0iNTUlIiBzdG9wLWNvbG9yPSIjNmM2M2ZmIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNGE0MGMwIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iMzIiIGZpbGw9InVybCgjYmcpIi8+PGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iMzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzZjNjNmZiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1vcGFjaXR5PSIwLjYiLz48Y2lyY2xlIGN4PSIxOCIgY3k9IjIxIiByPSI3IiBmaWxsPSJ1cmwoI2JlYXIpIi8+PGNpcmNsZSBjeD0iNDYiIGN5PSIyMSIgcj0iNyIgZmlsbD0idXJsKCNiZWFyKSIvPjxjaXJjbGUgY3g9IjMyIiBjeT0iMzUiIHI9IjE4IiBmaWxsPSJ1cmwoI2JlYXIpIi8+PGNpcmNsZSBjeD0iMTgiIGN5PSIyMSIgcj0iNCIgZmlsbD0iIzBkMGQxYSIgZmlsbC1vcGFjaXR5PSIwLjM1Ii8+PGNpcmNsZSBjeD0iNDYiIGN5PSIyMSIgcj0iNCIgZmlsbD0iIzBkMGQxYSIgZmlsbC1vcGFjaXR5PSIwLjM1Ii8+PGNpcmNsZSBjeD0iMjYiIGN5PSIzMSIgcj0iMi41IiBmaWxsPSIjMGQwZDFhIi8+PGNpcmNsZSBjeD0iMzgiIGN5PSIzMSIgcj0iMi41IiBmaWxsPSIjMGQwZDFhIi8+PGNpcmNsZSBjeD0iMjciIGN5PSIzMCIgcj0iMC45IiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjUiLz48Y2lyY2xlIGN4PSIzOSIgY3k9IjMwIiByPSIwLjkiIGZpbGw9IndoaXRlIiBmaWxsLW9wYWNpdHk9IjAuNSIvPjxlbGxpcHNlIGN4PSIzMiIgY3k9IjM3IiByeD0iMi41IiByeT0iMiIgZmlsbD0iIzBkMGQxYSIvPjxwYXRoIGQ9Ik0gMjggNDAuNSBRIDMyIDQ0LjUgMzYgNDAuNSIgc3Ryb2tlPSIjMGQwZDFhIiBzdHJva2Utd2lkdGg9IjEuOCIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PC9zdmc+" alt="James Finance"/>
+    <span class="logo-name">James <span>Finance</span></span>
+  </a>
+  <a class="nav-back" href="/">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    Back to Home
+  </a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <p class="section-tag">Legal</p>
+  <h1>Privacy <span class="gr">Policy</span></h1>
+  <p class="hero-sub">We believe in complete transparency about how we handle your data. Here's exactly what we collect, why, and the rights you have over it.</p>
+  <div class="meta-row">
+    <div class="meta-pill">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Last updated: 03 March 2026
+    </div>
+    <div class="meta-pill">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      UK GDPR Compliant
+    </div>
+    <div class="meta-pill">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      Available in 9 Languages in App
+    </div>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="page-wrap">
+
+  <!-- TOC -->
+  <div class="toc reveal">
+    <div class="toc-label">Contents</div>
+    <div class="toc-grid">
+      <a href="#s1"><span class="toc-num">01</span>Who We Are</a>
+      <a href="#s2"><span class="toc-num">02</span>What Data We Collect</a>
+      <a href="#s3"><span class="toc-num">03</span>How We Use Your Data</a>
+      <a href="#s4"><span class="toc-num">04</span>Storage &amp; Security</a>
+      <a href="#s5"><span class="toc-num">05</span>Third-Party Services</a>
+      <a href="#s6"><span class="toc-num">06</span>Tax Helper</a>
+      <a href="#s7"><span class="toc-num">07</span>Bank Linking</a>
+      <a href="#s8"><span class="toc-num">08</span>Your Rights (UK GDPR)</a>
+      <a href="#s9"><span class="toc-num">09</span>Data Retention</a>
+      <a href="#s10"><span class="toc-num">10</span>Children</a>
+      <a href="#s11"><span class="toc-num">11</span>Changes</a>
+      <a href="#s12"><span class="toc-num">12</span>Contact</a>
+    </div>
+  </div>
+
+  <!-- 1 -->
+  <div class="section reveal" id="s1">
+    <div class="section-hdr">
+      <span class="s-num">01</span>
+      <h2>Who We Are</h2>
+    </div>
+    <div class="card">
+      <p>James Finance is a personal finance application built to help you track spending, manage budgets, set saving goals, and understand your overall financial health — all in one place.</p>
+      <p>We are the data controller for all personal data collected through the James Finance app and this website.</p>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="clabel">General Enquiries</div>
+          <a href="mailto:contact@jamesfinance.app">contact@jamesfinance.app</a>
+        </div>
+        <div class="contact-card">
+          <div class="clabel">Data &amp; Privacy Requests</div>
+          <a href="mailto:privacy@jamesfinance.app">privacy@jamesfinance.app</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="section reveal" id="s2">
+    <div class="section-hdr">
+      <span class="s-num">02</span>
+      <h2>What Data We Collect</h2>
+    </div>
+    <div class="card">
+      <table>
+        <thead>
+          <tr>
+            <th>Data Type</th>
+            <th>What It Is</th>
+            <th>Stored Where</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="tag">Account</span></td>
+            <td>Email address and encrypted password</td>
+            <td>Supabase Auth (AWS)</td>
+          </tr>
+          <tr>
+            <td><span class="tag">Financial</span></td>
+            <td>Transactions, cards, bills, goals, assets and income sources you manually enter</td>
+            <td>Supabase (AWS)</td>
+          </tr>
+          <tr>
+            <td><span class="tag">Receipts</span></td>
+            <td>Images processed in real-time by Claude AI to extract transaction details</td>
+            <td><span class="tag green">Not stored</span></td>
+          </tr>
+          <tr>
+            <td><span class="tag">Tax Helper</span></td>
+            <td>Tax estimates and checklist progress</td>
+            <td>Your device only</td>
+          </tr>
+          <tr>
+            <td><span class="tag">Diagnostics</span></td>
+            <td>Anonymised crash reports — no financial data included</td>
+            <td>Anonymised</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="notice green">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <p>We do <strong>not</strong> collect biometric data, location data, or your contact lists. Ever.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="section reveal" id="s3">
+    <div class="section-hdr">
+      <span class="s-num">03</span>
+      <h2>How We Use Your Data</h2>
+    </div>
+    <div class="card">
+      <p>Your data is used solely to provide and improve the James Finance experience:</p>
+      <ul>
+        <li>Displaying your financial summary, transactions, goals, and assets</li>
+        <li>Scanning receipts using AI to extract transaction details</li>
+        <li>Syncing your data securely across your devices via Supabase</li>
+        <li>Calculating tax estimates locally on your device</li>
+        <li>Sending account emails (password reset, important notices)</li>
+        <li>Sending optional budget and goal notifications you enable in-app</li>
+      </ul>
+      <div class="notice green">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <p>We <strong>never</strong> sell your data, share it with advertisers, or use it for any purpose outside providing James Finance to you.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="section reveal" id="s4">
+    <div class="section-hdr">
+      <span class="s-num">04</span>
+      <h2>Data Storage &amp; Security</h2>
+    </div>
+    <div class="card">
+      <ul>
+        <li>All data in transit is encrypted via <strong>TLS 1.2+</strong></li>
+        <li>All data at rest is encrypted via <strong>AES-256</strong> (Supabase / AWS)</li>
+        <li><strong>Row Level Security (RLS)</strong> is enforced — only you can access your own data</li>
+        <li>Auth tokens are stored in your device's secure enclave (iOS Keychain / Android Keystore)</li>
+        <li>All inputs are sanitised both client-side and server-side to prevent injection attacks</li>
+        <li>Rate limiting is applied to login, signup, and promo code attempts</li>
+        <li>Tax helper data is stored locally via AsyncStorage and never transmitted to our servers</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="section reveal" id="s5">
+    <div class="section-hdr">
+      <span class="s-num">05</span>
+      <h2>Third-Party Services</h2>
+    </div>
+    <div class="card">
+      <table>
+        <thead>
+          <tr><th>Service</th><th>Purpose</th><th>Data Shared</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Supabase</strong></td>
+            <td>Database &amp; authentication (hosted on AWS)</td>
+            <td>Account &amp; financial data</td>
+          </tr>
+          <tr>
+            <td><strong>Anthropic (Claude AI)</strong></td>
+            <td>Receipt scanning only</td>
+            <td>Receipt images — not retained</td>
+          </tr>
+          <tr>
+            <td><strong>ExchangeRate-API</strong></td>
+            <td>Live currency conversion rates</td>
+            <td>No personal data sent</td>
+          </tr>
+          <tr>
+            <td><strong>Alpha Vantage</strong></td>
+            <td>Stock data (Premium)</td>
+            <td>No personal data sent</td>
+          </tr>
+          <tr>
+            <td><strong>Finnhub</strong></td>
+            <td>Trading signals (Premium)</td>
+            <td>No personal data sent</td>
+          </tr>
+          <tr>
+            <td><strong>CoinGecko</strong></td>
+            <td>Crypto prices (Premium)</td>
+            <td>No personal data sent</td>
+          </tr>
+          <tr>
+            <td><strong>Expo / React Native</strong></td>
+            <td>App framework &amp; build infrastructure</td>
+            <td>Anonymised crash diagnostics only</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="section reveal" id="s6">
+    <div class="section-hdr">
+      <span class="s-num">06</span>
+      <h2>Tax Helper</h2>
+    </div>
+    <div class="card">
+      <p>The Tax Helper feature operates entirely on your device:</p>
+      <ul>
+        <li>All estimates, calculations, and checklist progress are stored locally</li>
+        <li>No tax data is ever sent to our servers or any third party</li>
+        <li>Data is scoped to your user ID to prevent cross-account leakage</li>
+        <li>Deleting the app removes all locally stored tax data</li>
+      </ul>
+      <div class="notice yellow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <p>Tax estimates in James Finance are for <strong>guidance only</strong> and do not constitute financial or tax advice. Always consult a qualified tax professional.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="section reveal" id="s7">
+    <div class="section-hdr">
+      <span class="s-num">07</span>
+      <h2>Bank Linking</h2>
+    </div>
+    <div class="card">
+      <p>Direct bank linking is not currently available in James Finance. All cards and investments are added manually by you.</p>
+      <p>When bank linking is introduced, it will use a regulated Open Banking provider and you will be asked for explicit, informed consent before any connection is made. You can revoke access at any time.</p>
+    </div>
+  </div>
+
+  <!-- 8 -->
+  <div class="section reveal" id="s8">
+    <div class="section-hdr">
+      <span class="s-num">08</span>
+      <h2>Your Rights (UK GDPR)</h2>
+    </div>
+    <div class="card">
+      <p>Under UK GDPR, you have the following rights regarding your personal data:</p>
+      <ul>
+        <li><strong>Right of Access</strong> — request a copy of the data we hold about you</li>
+        <li><strong>Right to Rectification</strong> — correct inaccurate or incomplete data</li>
+        <li><strong>Right to Erasure</strong> — request permanent deletion of your personal data</li>
+        <li><strong>Right to Data Portability</strong> — receive your data in a machine-readable format</li>
+        <li><strong>Right to Object</strong> — object to or restrict certain types of processing</li>
+        <li><strong>Right to Complain</strong> — lodge a complaint with the ICO at <a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a></li>
+      </ul>
+      <div class="notice green">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <p>Email <a href="mailto:privacy@jamesfinance.app">privacy@jamesfinance.app</a> to exercise any of these rights. We respond within <strong>30 days</strong>.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 9 -->
+  <div class="section reveal" id="s9">
+    <div class="section-hdr">
+      <span class="s-num">09</span>
+      <h2>Data Retention</h2>
+    </div>
+    <div class="card">
+      <ul>
+        <li>Data is retained for as long as your account is active</li>
+        <li>On account deletion, all personal and financial data is permanently removed from our servers within <strong>30 days</strong></li>
+        <li>Locally stored data (Tax Helper, preferences, cache) is removed when you uninstall the app</li>
+        <li>You can delete your account at any time from <strong>Settings → Delete Account</strong> in the app</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 10 -->
+  <div class="section reveal" id="s10">
+    <div class="section-hdr">
+      <span class="s-num">10</span>
+      <h2>Children</h2>
+    </div>
+    <div class="card">
+      <p>James Finance is not intended for or directed at anyone under the age of 18. We do not knowingly collect personal data from minors.</p>
+      <p>If you believe a minor has created an account, please contact us at <a href="mailto:contact@jamesfinance.app">contact@jamesfinance.app</a> and we will take immediate action to remove their data.</p>
+    </div>
+  </div>
+
+  <!-- 11 -->
+  <div class="section reveal" id="s11">
+    <div class="section-hdr">
+      <span class="s-num">11</span>
+      <h2>Changes to This Policy</h2>
+    </div>
+    <div class="card">
+      <p>We may update this Privacy Policy from time to time as our features evolve or legal requirements change. When we do, the "Last Updated" date at the top of this page will be revised.</p>
+      <p>For significant changes, we will notify you via email or an in-app notification. Continued use of James Finance after changes constitutes acceptance of the updated policy.</p>
+    </div>
+  </div>
+
+  <!-- 12 -->
+  <div class="section reveal" id="s12">
+    <div class="section-hdr">
+      <span class="s-num">12</span>
+      <h2>Contact Us</h2>
+    </div>
+    <div class="card">
+      <p>Have a question about your data or this policy? We're happy to help.</p>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="clabel">Privacy &amp; Data Requests</div>
+          <a href="mailto:privacy@jamesfinance.app">privacy@jamesfinance.app</a>
+        </div>
+        <div class="contact-card">
+          <div class="clabel">General Enquiries</div>
+          <a href="mailto:contact@jamesfinance.app">contact@jamesfinance.app</a>
+        </div>
+        <div class="contact-card">
+          <div class="clabel">ICO (UK Regulator)</div>
+          <a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a>
+        </div>
+        <div class="contact-card">
+          <div class="clabel">Response Time</div>
+          <span class="cval">Within 30 days</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <span>© 2026 James Finance. All rights reserved.</span>
+  <div class="footer-links">
+    <a href="mailto:contact@jamesfinance.app">Contact</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+  </div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
